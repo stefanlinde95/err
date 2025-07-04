@@ -1,0 +1,16 @@
+<div class="high-card relative">
+  <a [href]="movie.canonicalUrl + '/' + movie.fancyUrl" class="relative group">
+    <div class="absolute top-[2.5%] left-[3.5%] lg:top-2 lg:left-2 invisible group-hover:visible flex gap-1">
+      <ng-icon name="heroPlusCircleSolid" size="32" color="#FFFFFF" class="peer"></ng-icon>
+      <div class="opacity-0 peer-hover:opacity-100 scale-90 peer-hover:scale-100 duration-300 bg-black/50 flex items-center text-white border border-white rounded-md px-2 text-xs">Lisa lemmikutesse</div>
+    </div>
+    <img
+      [src]="movie.verticalPhotos[0].photoTypes['80'].url"
+      [alt]="movie.heading"
+      class="rounded-sm object-cover"
+      [loading]="'lazy'"
+      [decoding]="'async'"
+    />
+  </a>
+</div>
+

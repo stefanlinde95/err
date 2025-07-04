@@ -1,0 +1,20 @@
+.timeline-container {
+    padding-left: 1.5rem;
+    scroll-padding-left: 1.5rem;
+}
+
+.carousel-btn {
+    height: calc((100vw - var(--timeline-button-width) - var(--timeline-margin-left) - (var(--nr-of-items) - 1) * var(--timeline-card-margin)) / var(--nr-of-items) / var(--timeline-item-aspect-ratio))
+}
+
+.carousel-btn-left {
+    background: linear-gradient(to right, rgba(32, 52, 67, 0.8) 0%, rgba(32, 52, 67, 0.8) 15%, rgba(32, 52, 67, 0.4) 85%, rgba(32, 52, 67, 0.4) 100%);
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.carousel-btn-right {
+    background: linear-gradient(to right, rgba(32, 52, 67, 0.4) 0%, rgba(32, 52, 67, 0.4) 15%, rgba(32, 52, 67, 0.8) 85%, rgba(32, 52, 67, 0.8) 100%);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}

@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import "tailwindcss";
+
+html, body {
+    font-family: 'Rubik', sans-serif;
+}
+
+:root {
+    --timeline-button-width: 60px;
+    --timeline-margin-left: 24px;
+    --timeline-card-margin: calc(.3vw + 4px);
+    --timeline-button-width: 60px;
+    --timeline-item-aspect-ratio: calc(2 / 3);
+    --search-options-list: 200px;
+    --countdown-circle-radius: 0px;
+    --maia-top-menu-height: 48px;
+    --maia-sub-menu-height: 50px;
+    --standard-card-width: calc((100vw - var(--timeline-button-width) - var(--timeline-margin-left) - (var(--nr-of-items) * var(--timeline-card-margin))) / var(--nr-of-items))
+}
+
+@media (max-width: 767.99px) {
+    :root {
+        --nr-of-items: 2;
+        --timeline-margin-left: 12px
+    }
+}
+
+@media (min-width: 768px) and (max-width: 959.99px) {
+    :root {
+        --nr-of-items: 3
+    }
+}
+
+@media (min-width: 960px) and (max-width: 1279.99px) {
+    :root {
+        --nr-of-items: 4
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1919.99px) {
+    :root {
+        --nr-of-items: 6
+    }
+}
+
+@media (min-width: 1920px) {
+    :root {
+        --nr-of-items: 7
+    }
+}

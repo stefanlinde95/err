@@ -1,0 +1,41 @@
+@if (section.headerUrl) {
+    <h2 class="text-[calc(20px+.00625*(100vw-320px))] font-extralight m-6 inline-flex">
+        <a [href]="section.headerUrl" class="text-white flex items-center gap-2 group">
+            {{ section.header }}
+            <ng-icon name="heroChevronRight" size="24" strokeWidth="3" color="#C8C8C8" class="group-hover:text-white"></ng-icon>
+            <span class="text-[#C8C8C8] text-[calc(14px+6*(100vw-320px)/2560)] group-hover:underline group-hover:text-white">Vaata kõiki</span>
+        </a>
+    </h2>
+} @else {
+    <h2 class="text-[calc(20px+.00625*(100vw-320px))] font-extralight m-6 text-white">{{ section.header }}</h2>
+}
+
+<div
+    #timelineContainer
+    (scroll)="onScroll()"
+    class="timeline-container flex flex-nowrap overflow-x-scroll gap-[calc(.3vw+4px)] scrollbar-hide snap-x snap-mandatory"
+>
+    @for (movie of section.data; track movie.id) {
+        <app-high-card [movie]="movie" class="snap-start" />
+    }
+    <button
+        (click)="prevSection()"
+        [disabled]="isPrevDisabled()"
+        [ariaLabel]="'Previous'"
+        class="carousel-btn carousel-btn-left w-16 absolute left-0 hidden lg:flex items-center justify-center opacity-80 hover:opacity-100 disabled:hidden cursor-pointer">
+        <div class="rounded-full bg-white size-7 flex items-center justify-center">
+            <ng-icon name="heroChevronLeftSolid" size="20" color="#000000"></ng-icon>
+        </div>
+    </button>
+    <button
+        (click)="nextSection()"
+        [disabled]="isNextDisabled()"
+        [ariaLabel]="'Next'"
+        class="carousel-btn carousel-btn-right w-16 absolute right-0 hidden lg:flex items-center justify-center opacity-80 hover:opacity-100 disabled:hidden cursor-pointer">
+        <div class="rounded-full bg-white size-7 flex items-center justify-center">
+            <ng-icon name="heroChevronRightSolid" size="20" color="#000000"></ng-icon>
+        </div>
+    </button>
+</div>
+
+

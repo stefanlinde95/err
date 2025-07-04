@@ -1,0 +1,4 @@
+.high-card {
+    width: var(--standard-card-width);
+    height: calc(var(--standard-card-width) / 2 * 3)
+}
