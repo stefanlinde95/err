@@ -1,6 +1,11 @@
 .timeline-container {
     padding-left: 1.5rem;
     scroll-padding-left: 1.5rem;
+
+   @media (max-width: 767.99px) {
+       padding-left: 0.75rem;
+       scroll-padding-left: 0.75rem;
+   }
 }
 
 .carousel-btn {

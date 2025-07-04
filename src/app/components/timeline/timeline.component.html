@@ -1,5 +1,5 @@
 @if (section.headerUrl) {
-    <h2 class="text-[calc(20px+.00625*(100vw-320px))] font-extralight m-6 inline-flex">
+    <h2 class="text-[calc(20px+.00625*(100vw-320px))] font-extralight max-md:mx-3 max-md:my-4 md:m-6 inline-flex">
         <a [href]="section.headerUrl" class="text-white flex items-center gap-2 group">
             {{ section.header }}
             <ng-icon name="heroChevronRight" size="24" strokeWidth="3" color="#C8C8C8" class="group-hover:text-white"></ng-icon>
@@ -7,7 +7,7 @@
         </a>
     </h2>
 } @else {
-    <h2 class="text-[calc(20px+.00625*(100vw-320px))] font-extralight m-6 text-white">{{ section.header }}</h2>
+    <h2 class="text-[calc(20px+.00625*(100vw-320px))] font-extralight max-md:mx-3 max-md:my-4 md:m-6 text-white">{{ section.header }}</h2>
 }
 
 <div
